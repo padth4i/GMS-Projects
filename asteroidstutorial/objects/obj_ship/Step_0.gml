@@ -18,11 +18,12 @@ if (keyboard_check_pressed(vk_space)) {
 	audio_play_sound(snd_zap, 1, false);
 }
 
-if (sprite_index = spr_shipshield) {
-	i++;
+if (sprite_index == spr_shipshield) {
+	global.shipshield_timer += room_speed;
 }
 
-if (i >= 15) {
+if (global.shipshield_timer >= 360 * room_speed) {
 	sprite_index = spr_ship;
+	mask_index = spr_ship;
 }
 move_wrap(true, true, sprite_width/32);
