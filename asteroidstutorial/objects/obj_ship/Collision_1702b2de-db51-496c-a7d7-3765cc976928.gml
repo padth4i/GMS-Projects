@@ -4,6 +4,8 @@ with(other) {
 	instance_destroy();
 }
 
+score+=10;
+
 sprite_index = spr_shipshield;
 
 mask_index = spr_empty;
